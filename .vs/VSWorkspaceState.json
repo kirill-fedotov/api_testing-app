@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Cypress",
+    "\\Cypress\\cypress",
+    "\\Cypress\\cypress\\e2e"
   ],
-  "SelectedNode": "\\C:\\Users\\XXX\\Source\\Repos\\api_testing-app",
+  "SelectedNode": "\\Cypress\\cypress\\e2e\\signup_login.cy.js",
   "PreviewInSolutionExplorer": false
 }
