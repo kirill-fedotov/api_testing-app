@@ -45,6 +45,18 @@ describe('SignUp', () => {
     })
 
 
+    it('Mock global feed data', () => {
+        cy.intercept("GET", "**/articles/feed*", { fixture: 'testArticles' }).as('articles')
+        cy.visit("http://localhost:4200/")
+        cy.get(".nav").contains("Sign in").click()
+        cy.get("[placeholder='Email']").type(email)
+        cy.get("[placeholder='Password']").type(randomString)
+        cy.get("button").contains("Sign in").click()
+        cy.wait('@articles')
+
+    })
+
+
 
 })
 
