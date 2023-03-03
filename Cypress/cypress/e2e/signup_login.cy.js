@@ -20,8 +20,8 @@ describe('SignUp', () => {
 
     cy.wait('@newUser')
     cy.get("@newUser").should((xhr) => {
-      expect(xhr.request.body.user.username).to.equal("User" + randomString)
-      expect(xhr.request.body.user.email).to.equal("User" + randomString + "@mail.com")
+        expect(xhr.request.body.user.username).to.equal(userName)
+        expect(xhr.request.body.user.email).to.equal(email)
 
     })
     
