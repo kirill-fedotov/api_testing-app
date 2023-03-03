@@ -29,13 +29,18 @@ describe('SignUp', () => {
 
 
     it('Test valid login', () => {
-        
+        cy.intercept("GET", "https://api.realworld.io/api/tags", { fixture: 'popularTags' })
         cy.visit("http://localhost:4200/")
         cy.get(".nav").contains("Sign in").click()
         cy.get("[placeholder='Email']").type(email)
         cy.get("[placeholder='Password']").type(randomString)
         cy.get("button").contains("Sign in").click()
         cy.get(':nth-child(4) > .nav-link').should('be.visible')
+        cy.get('.tag-list')
+            .should('contain', 'nodejs')
+            .should('contain', 'cypress')
+            .should('contain', 'automation-testing')
+            .should('contain', 'quani')
 
     })
 
