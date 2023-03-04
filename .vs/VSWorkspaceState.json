@@ -4,8 +4,9 @@
     "\\Cypress",
     "\\Cypress\\cypress",
     "\\Cypress\\cypress\\e2e",
-    "\\Cypress\\cypress\\fixtures"
+    "\\Cypress\\cypress\\fixtures",
+    "\\Cypress\\cypress\\support"
   ],
-  "SelectedNode": "\\Cypress\\.gitignore",
+  "SelectedNode": "\\Cypress\\cypress.config.js",
   "PreviewInSolutionExplorer": false
 }
